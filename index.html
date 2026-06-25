@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Palais Africain - Restaurant Camerounais</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">🦁 Le Palais Africain</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#avis">Avis</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#reservation">Réservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="panier.html" class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="burger" id="burger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Accueil -->
+    <section class="hero" id="accueil">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-petit-titre">Bienvenue chez</p>
+            <h1>Le Palais Africain</h1>
+            <p class="hero-description">Découvrez les vraies saveurs de l'Afrique à Douala. Une cuisine traditionnelle camerounaise préparée avec passion et authenticité.</p>
+            <div class="hero-boutons">
+                <a href="#menu" class="btn btn-primary">Voir le Menu</a>
+                <a href="#reservation" class="btn btn-secondary">Réserver une Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- A propos -->
+    <section class="apropos" id="apropos">
+        <div class="container">
+            <div class="section-titre">
+                <h2>Notre Histoire</h2>
+                <div class="titre-ligne"></div>
+            </div>
+            <div class="apropos-grid">
+                <div class="apropos-image">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600" alt="Notre chef cuisinier">
+                </div>
+                <div class="apropos-texte">
+                    <h3>Une Passion pour la Cuisine Africaine</h3>
+                    <p>Fondé en 2012, Le Palais Africain est né d'une passion pour les saveurs authentiques de l'Afrique. Notre chef, Dieudonné Mbida, apporte avec lui les recettes de sa grand-mère et les transmet de génération en génération.</p>
+                    <p>Nous croyons en une cuisine qui honore les traditions tout en embrassant l'innovation. Chaque plat est préparé avec des ingrédients frais et locaux, sélectionnés avec soin.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-chiffre">15+</span>
+                            <span class="stat-texte">Années d'expérience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-chiffre">50+</span>
+                            <span class="stat-texte">Plats au menu</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-chiffre">10k+</span>
+                            <span class="stat-texte">Clients satisfaits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-titre">
+                <h2>Notre Menu</h2>
+                <div class="titre-ligne"></div>
+                <p class="section-desc">Une sélection de plats traditionnels africains préparés avec amour</p>
+            </div>
+
+            <!-- Filtres -->
+            <div class="filtres">
+                <button class="filtre-btn active" data-filtre="tous">Tout</button>
+                <button class="filtre-btn" data-filtre="entrees">Entrées</button>
+                <button class="filtre-btn" data-filtre="plats">Plats</button>
+                <button class="filtre-btn" data-filtre="desserts">Desserts</button>
+                <button class="filtre-btn" data-filtre="boissons">Boissons</button>
+            </div>
+
+            <!-- Grille du menu -->
+            <div class="menu-grid">
+
+                <!-- Entrées -->
+                <div class="carte" data-categorie="entrees"
+                     data-nom="Brochettes de Boeuf"
+                     data-prix="5500"
+                     data-image="assets\brochette_de_bœuf.jpg"
+                     data-description="Nos brochettes de boeuf sont préparées avec de la viande de première qualité, marinée pendant plusieurs heures dans un mélange d'épices camerounaises traditionnelles. Grillées au feu de bois pour un goût fumé authentique, elles sont servies accompagnées de pikos croustillants et d'une sauce pimentée maison. Un incontournable pour débuter votre repas."
+                     data-temps="20 min"
+                     data-portion="6 brochettes">
+                    <div class="carte-img">
+                        <img src="assets/brochette_de_bœuf.jpg" alt="Brochettes de Boeuf">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Brochettes de Boeuf</h3>
+                        <p>Brochettes grillées au feu de bois, servies avec pikos</p>
+                        <div class="carte-bas">
+                            <span class="prix">5 500 XAF</span>
+                            <button class="btn-ajouter" data-nom="Brochettes de Boeuf" data-prix="5500" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte" data-categorie="entrees"
+                     data-nom="Omelette"
+                     data-prix="600"
+                     data-image="assets/Omelette.jpg"
+                     data-description="Savourez notre délicieuse omelette préparée à base d’œufs frais, battus et cuits avec soin pour offrir une texture légère, moelleuse et gourmande. Sublimée par un assaisonnement aux inspirations locales, elle s’accompagne de laitue croquante et de tomates fraîches du marché pour une touche de fraîcheur. Un plat simple, généreux et plein de saveurs, parfait pour éveiller l’appétit à tout moment de la journée."
+                     data-temps="5 min"
+                     data-portion="3 oeufs">
+                    <div class="carte-img">
+                        <img src=":assets/Omelette.jpg" alt="Omelette">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Omelette</h3>
+                        <p>frais et succulant</p>
+                        <div class="carte-bas">
+                            <span class="prix">600 XAF</span>
+                            <button class="btn-ajouter" data-nom="Omelette" data-prix="600" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte" data-categorie="entrees"
+                     data-nom="Salade de Crudités"
+                     data-prix="1000"
+                     data-image="assets/crudite.jpg"
+                     data-description="Une salade fraîche et colorée composée de tomates juteuses, concombres croquants, oignons rouges émincés et betteraves sucrées. Le tout est assaisonné d'un filet d'huile de palme rouge vierge et d'un soupçon de citron vert. Une entrée parfaite pour les journées chaudes de Douala."
+                     data-temps="10 min"
+                     data-portion="1 assiette">
+                    <div class="carte-img">
+                        <img src="assets/crudite.jpg" alt="Salade de Crudités">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Salade de Crudités</h3>
+                        <p>Tomates, concombre, oignon, betterave, huile de palme</p>
+                        <div class="carte-bas">
+                            <span class="prix">1 000 XAF</span>
+                            <button class="btn-ajouter" data-nom="Salade de Crudités" data-prix="1000" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plats -->
+                <div class="carte" data-categorie="plats"
+                     data-nom="Ndole"
+                     data-prix="1500"
+                     data-image="assets/Ndole.jpg"
+                     data-description="Le Ndolé est LE plat national du Cameroun. Préparé avec des feuilles de ndolé soigneusement lavées et cuites, des crevettes fraîches du Wouri, et une pâte d'arachides grillées. Notre chef prépare ce plat selon la recette ancestrale transmise par sa grand-mère. Servi avec du plantain mûr frit doré et croustillant. C'est un voyage gustatif au coeur du Cameroun."
+                     data-temps="45 min"
+                     data-portion="1 plat copieux">
+                    <div class="carte-img">
+                        <img src="assets/Ndole.jpg" alt="Ndole">
+                        <span class="badge">Signature</span>
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Ndolé</h3>
+                        <p>Feuilles de ndolé, crevettes, arachides, servi avec plantain</p>
+                        <div class="carte-bas">
+                            <span class="prix">1 500 XAF</span>
+                            <button class="btn-ajohttpsuter" data-nom="Ndole" data-prix="1500" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte" data-categorie="plats"
+                     data-nom="Eru"
+                     data-prix="1000"
+                     data-image="assets/Eru.jpg"
+                     data-description="L'Eru est un plat emblématique du Sud-Ouest camerounais. Il est préparé avec des feuilles d'okok finement coupées, de la peau de boeuf tendre, des écrevisses séchées et de l'huile de palme rouge. Accompagné de water fufu traditionnel, ce plat est un véritable concentré de saveurs africaines qui ravira les amateurs de cuisine authentique."
+                     data-temps="50 min"
+                     data-portion="1 plat copieux">
+                    <div class="carte-img">
+                        <img src="assets/Eru.jpg" alt="Eru">
+                        <span class="badge">Populaire</span>
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Eru</h3>
+                        <p>Feuilles d'okok, peau de boeuf, écrevisses, accompagné de fufu</p>
+                        <div class="carte-bas">
+                            <span class="prix">1 000 XAF</span>
+                            <button class="btn-ajouter" data-nom="Eru" data-prix="1000" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte" data-categorie="plats"
+                     data-nom="Ekwang"
+                     data-prix="1000"
+                     data-image="assets/Ekwang.jpg"
+                     data-description="L'Ekwang est une spécialité du peuple Bakweri du Sud-Ouest. Du macabo finement râpé est enveloppé dans des feuilles de macabo, puis cuit lentement avec du poisson fumé et de l'huile de palme. Le résultat est un plat fondant, parfumé et riche en saveurs. Un vrai délice traditionnel que notre chef maîtrise à la perfection."
+                     data-temps="1h"
+                     data-portion="1 plat">
+                    <div class="carte-img">
+                        <img src="assets/Ekwang.jpg" alt="Ekwang">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Ekwang</h3>
+                        <p>Macabo râpé, feuilles de macabo, poisson fumé</p>
+                        <div class="carte-bas">
+                            <span class="prix">1 000 XAF</span>
+                            <button class="btn-ajouter" data-nom="Ekwang" data-prix="1000" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte" data-categorie="plats"
+                     data-nom="Poulet DG"
+                     data-prix="5000"
+                     data-image="assets/poulet_DG.jpg"
+                     data-description="Le Poulet DG (Directeur Général) doit son nom au fait qu'il était autrefois réservé aux occasions spéciales. Notre version est préparée avec du poulet fermier doré à la poêle, des plantains mûrs caramélisés, des carottes, haricots verts et poivrons sautés. Le tout mijoté dans une sauce tomate épicée. Un plat festif par excellence."
+                     data-temps="40 min"
+                     data-portion="1 plat généreux">
+                    <div class="carte-img">
+                        <img src="assets/poulet_DG.jpg" alt="Poulet DG">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Poulet DG</h3>
+                        <p>Poulet frit, plantains mûrs, légumes sautés</p>
+                        <div class="carte-bas">
+                            <span class="prix">5 000 XAF</span>
+                            <button class="btn-ajouter" data-nom="Poulet DG" data-prix="5000" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte" data-categorie="plats"
+                     data-nom="Poisson Grillé"
+                     data-prix="2000"
+                     data-image="assets/Poisson.jpg"
+                     data-description="Notre poisson capitaine est sélectionné chaque matin au marché de Douala. Grillé entier au feu de bois avec un assaisonnement secret à base de citron, ail, gingembre et piment. Servi sur un lit de braises avec du manioc bouilli et une sauce tomate pimentée. La chair tendre et parfumée fond littéralement en bouche."
+                     data-temps="35 min"
+                     data-portion="1 poisson entier">
+                    <div class="carte-img">
+                        <img src="assets/Poisson.jpg" alt="Poisson Grillé">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Poisson Grillé</h3>
+                        <p>Poisson capitaine grillé au feu de bois, accompagné de manioc</p>
+                        <div class="carte-bas">
+                            <span class="prix">2 000 XAF</span>
+                            <button class="btn-ajouter" data-nom="Poisson Grillé" data-prix="2000" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte" data-categorie="plats"
+                     data-nom="Koki"
+                     data-prix="5000"
+                     data-image="assets/Koki.jpg"
+                     data-description="Le Koki est un gâteau salé traditionnel à base de haricots cornilles mixés, cuits à la vapeur dans des feuilles de bananier. Notre version est enrichie de lait de coco et accompagnée de poisson fumé émietté. La texture est moelleuse et fondante, avec un arôme unique que seule la cuisson en feuilles de bananier peut apporter."
+                     data-temps="1h"
+                     data-portion="2 portions">
+                    <div class="carte-img">
+                        <img src="assets/Koki.jpg" alt="Koki">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Koki</h3>
+                        <p>Gâteau de maïs, lait de coco, accompagné de poisson fumé</p>
+                        <div class="carte-bas">
+                            <span class="prix">5 000 XAF</span>
+                            <button class="btn-ajouter" data-nom="Koki" data-prix="5000" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="carte" data-categorie="desserts"
+                     data-nom="Beignets"
+                     data-prix="2000"
+                     data-image="assets/beignet.jpg"
+                     data-description="Nos beignets de farine de blé sont préparés chaque jour avec amour. La pâte est légèrement sucrée et parfumée à la vanille naturelle avant d'être frite dans l'huile jusqu'à obtenir une belle couleur dorée. Saupoudrés de sucre glace, fourrés avec du chocolat, ils sont moelleux à l'intérieur et croustillants à l'extérieur. Parfaits pour le goûter ou en fin de repas."
+                     data-temps="15 min"
+                     data-portion="6 beignets">
+                    <div class="carte-img">
+                        <img src="assets/beignet.jpg" alt="Beignets">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Beignets</h3>
+                        <p>Beignets farine fourré au chocolat, sucre glace</p>
+                        <div class="carte-bas">
+                            <span class="prix">2 000 XAF</span>
+                            <button class="btn-ajouter" data-nom="Beignets" data-prix="2000" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <!-- Boissons -->
+
+                <div class="carte" data-categorie="boissons"
+                     data-nom="Jus de Gingembre"
+                     data-prix="2000"
+                     data-image="assets/jus_gingembre.jpg"
+                     data-description="Notre jus de gingembre est pressé à froid chaque matin avec du gingembre frais du marché central. Mélangé avec du miel pur d'abeille et du jus de citron vert frais, c'est une boisson énergisante et revitalisante. Idéale pour accompagner un repas épicé ou simplement pour se rafraîchir. Disponible en version douce ou corsée selon vos préférences."
+                     data-temps="5 min"
+                     data-portion="33cl">
+                    <div class="carte-img">
+                        <img src="assets/jus_gingembre.jpg" alt="Jus de Gingembre">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Jus de Gingembre</h3>
+                        <p>Gingembre frais, miel, citron</p>
+                        <div class="carte-bas">
+                            <span class="prix">3 000 XAF</span>
+                            <button class="btn-ajouter" data-nom="Jus de Gingembre" data-prix="3000" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carte" data-categorie="boissons"
+                     data-nom="Thé à la Menthe"
+                     data-prix="2000"
+                     data-image="assets/the_menthe.jpg"
+                     data-description="Notre thé à la menthe est préparé selon la tradition avec du thé vert de qualité et des feuilles de menthe fraîche cueillies le matin même. Servi brûlant dans un verre traditionnel, le sucre se dissout lentement pour créer un équilibre parfait entre amertume et douceur. Un moment de détente à savourer après un bon repas."
+                     data-temps="5 min"
+                     data-portion="1 verre">
+                    <div class="carte-img">
+                        <img src="assets/the_menthe.jpg" alt="Thé à la Menthe">
+                        <div class="carte-hover">
+                            <span><i class="fas fa-eye"></i> Voir les détails</span>
+                        </div>
+                    </div>
+                    <div class="carte-contenu">
+                        <h3>Thé à la Menthe</h3>
+                        <p>Thé vert traditionnel, feuilles de menthe fraîche</p>
+                        <div class="carte-bas">
+                            <span class="prix">2 000 XAF</span>
+                            <button class="btn-ajouter" data-nom="Thé à la Menthe" data-prix="2000" onclick="event.stopPropagation()">
+                                <i class="fas fa-plus"></i> Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Avis clients -->
+    <section class="avis-section" id="avis">
+        <div class="container">
+            <div class="section-titre">
+                <h2>Ce que disent nos clients</h2>
+                <div class="titre-ligne"></div>
+            </div>
+            <div class="avis-grid">
+                <div class="avis-carte">
+                    <div class="avis-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Clarisse N.">
+                        <div>
+                            <h4>Clarisse N.</h4>
+                            <div class="etoiles">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Une expérience culinaire incroyable! Le ndolé m'a transportée au Cameroun. Le personnel est très accueillant et l'ambiance authentique."</p>
+                </div>
+                <div class="avis-carte">
+                    <div class="avis-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Paul T.">
+                        <div>
+                            <h4>Paul T.</h4>
+                            <div class="etoiles">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Le meilleur restaurant camerounais de Douala! Le ndolé est préparé avec une vraie maîtrise. Je recommande fortement!"</p>
+                </div>
+                <div class="avis-carte">
+                    <div class="avis-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Marie-Dominique T.">
+                        <div>
+                            <h4>Marie-Dominique T.</h4>
+                            <div class="etoiles">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"J'ai découvert ce restaurant et depuis j'y reviens régulièrement. Le bissap est délicieux et les desserts sont exquis!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section class="galerie" id="galerie">
+        <div class="container">
+            <div class="section-titre">
+                <h2>Notre Galerie</h2>
+                <div class="titre-ligne"></div>
+            </div>
+            <div class="galerie-grid">
+                <div class="galerie-item">
+                    <img src="assets/soupe.jpg" alt="Restaurant intérieur">
+                </div>
+                <div class="galerie-item">
+                    <img src="assets/sauce.jpg" alt="Notre chef">
+                </div>
+                <div class="galerie-item">
+                    <img src="assets/salle.jpg" alt="Nos plats">
+                </div>
+                <div class="galerie-item">
+                    <img src="assets/plat.jpg" alt="Table dressée">
+                </div>
+                <div class="galerie-item">
+                    <img src="assets/dressage.jpg" alt="Décoration">
+                </div>
+                <div class="galerie-item">
+                    <img src="assets/couple.jpg" alt="Ambiance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation -->
+    <section class="reservation" id="reservation">
+        <div class="container">
+            <div class="reservation-grid">
+                <div class="reservation-info">
+                    <h2>Réservez votre table</h2>
+                    <div class="titre-ligne" style="margin: 0 0 20px 0;"></div>
+                    <p>Réservez votre table pour une expérience culinaire inoubliable. Nous accueillons également les événements privés et les célébrations.</p>
+                    <div class="resa-details">
+                        <div class="resa-detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <span>+237 6 12 34 56 78</span>
+                            </div>
+                        </div>
+                        <div class="resa-detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <span>contact@palaisafricain.cm</span>
+                            </div>
+                        </div>
+                        <div class="resa-detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horaires</h4>
+                                <span>Lun-Jeu: 12h-14h30 / 19h-23h</span><br>
+                                <span>Ven-Sam: 12h-14h30 / 19h-00h</span><br>
+                                <span>Dim: 12h-15h / 19h-22h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reservation-form">
+                    <form id="reservationForm">
+                        <div class="form-group">
+                            <label for="resaNom">Nom complet</label>
+                            <input type="text" id="resaNom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="resaEmail">Email</label>
+                            <input type="email" id="resaEmail" placeholder="votre@email.com" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="resaTel">Téléphone</label>
+                                <input type="tel" id="resaTel" placeholder="+237..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="resaPersonnes">Personnes</label>
+                                <select id="resaPersonnes">
+                                    <option value="1">1 personne</option>
+                                    <option value="2" selected>2 personnes</option>
+                                    <option value="3">3 personnes</option>
+                                    <option value="4">4 personnes</option>
+                                    <option value="5">5 personnes</option>
+                                    <option value="6+">6+ personnes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="resaDate">Date</label>
+                                <input type="date" id="resaDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="resaHeure">Heure</label>
+                                <select id="resaHeure">
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="13:30">13:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="19:00" selected>19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="21:30">21:30</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="resaMessage">Message (optionnel)</label>
+                            <textarea id="resaMessage" rows="3" placeholder="Occasion spéciale, allergies..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-calendar-check"></i> Confirmer la réservation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-titre">
+                <h2>Nous Contacter</h2>
+                <div class="titre-ligne"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-infos">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Boulevard de la Liberté, Bonanjo<br>Douala, Cameroun</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+237 6 12 34 56 78</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@palaisafricain.cm</p>
+                        </div>
+                    </div>
+                    <div class="reseaux-sociaux">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2158501534347!2d9.692!3d4.051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDouala%2C%20Cameroun!5e0!3m2!1sfr!2sfr!4v1234567890!5m2!1sfr!2sfr"
+                        width="100%" height="100%" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🦁 Le Palais Africain</h3>
+                    <p>Restaurant africain authentique proposant une cuisine traditionnelle camerounaise. Venez découvrir les saveurs de l'Afrique à Douala.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Réservation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="panier.html">Panier</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Horaires</h4>
+                    <ul>
+                        <li>Lun - Jeu : 12h - 23h</li>
+                        <li>Ven - Sam : 12h - 00h</li>
+                        <li>Dimanche : 12h - 22h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Le Palais Africain. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal detail produit -->
+    <div class="produit-modal-overlay" id="produitModal">
+        <div class="produit-modal">
+            <button class="produit-modal-close" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="produit-modal-img">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="produit-modal-body">
+                <h2 id="modalNom"></h2>
+                <div class="produit-modal-infos">
+                    <span class="produit-info-tag"><i class="fas fa-clock"></i> <span id="modalTemps"></span></span>
+                    <span class="produit-info-tag"><i class="fas fa-utensils"></i> <span id="modalPortion"></span></span>
+                </div>
+                <p class="produit-modal-desc" id="modalDesc"></p>
+                <div class="produit-modal-bas">
+                    <span class="produit-modal-prix" id="modalPrix"></span>
+                    <button class="btn btn-primary" id="modalBtnAjouter">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notifMessage">Article ajouté au panier !</span>
+    </div>
+
+    <!-- Bouton retour en haut -->
+    <button class="btn-top" id="btnTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

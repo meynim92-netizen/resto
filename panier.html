@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Le Palais Africain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-solid" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🦁 Le Palais Africain</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="panier.html" class="cart-icon active">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="burger" id="burger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Panier -->
+    <section class="panier-page">
+        <div class="container">
+            <div class="panier-header">
+                <h1><i class="fas fa-shopping-cart"></i> Mon Panier</h1>
+                <a href="index.html#menu" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Continuer les achats
+                </a>
+            </div>
+
+            <!-- Contenu du panier -->
+            <div class="panier-contenu" id="panierContenu">
+                <!-- Panier vide par défaut -->
+                <div class="panier-vide" id="panierVide">
+                    <i class="fas fa-shopping-basket"></i>
+                    <h2>Votre panier est vide</h2>
+                    <p>Ajoutez des plats depuis notre menu pour commencer votre commande.</p>
+                    <a href="index.html#menu" class="btn btn-primary">Voir le Menu</a>
+                </div>
+
+                <!-- Liste des articles (rempli par JS) -->
+                <div class="panier-liste" id="panierListe" style="display: none;">
+                    <div class="panier-tableau">
+                        <div class="panier-thead">
+                            <span>Article</span>
+                            <span>Prix unitaire</span>
+                            <span>Quantité</span>
+                            <span>Sous-total</span>
+                            <span></span>
+                        </div>
+                        <div id="panierItems">
+                            <!-- Les articles seront ajoutés ici par JS -->
+                        </div>
+                    </div>
+
+                    <!-- Résumé de la commande -->
+                    <div class="panier-resume">
+                        <h3>Résumé de la commande</h3>
+                        <div class="resume-ligne">
+                            <span>Sous-total</span>
+                            <span id="sousTotal">0 XAF</span>
+                        </div>
+                        <div class="resume-ligne">
+                            <span>Livraison</span>
+                            <span id="livraison">1 500 XAF</span>
+                        </div>
+                        <div class="resume-ligne total">
+                            <span>Total</span>
+                            <span id="totalFinal">0 XAF</span>
+                        </div>
+                        <button class="btn btn-primary btn-valider" id="btnValider">
+                            <i class="fas fa-check"></i> Valider la commande
+                        </button>
+                        <button class="btn btn-danger" id="btnVider">
+                            <i class="fas fa-trash"></i> Vider le panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de confirmation -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-contenu" id="modalContenu">
+            <div class="modal-animation">
+                <div class="checkmark-circle">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2>Commande validée !</h2>
+                <p>Merci pour votre commande. Nous préparons vos plats avec amour.</p>
+                <p class="modal-detail">Temps de préparation estimé : <strong>30-45 minutes</strong></p>
+                <button class="btn btn-primary" id="btnFermerModal">
+                    Retour à l'accueil
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notifMessage">Article retiré du panier</span>
+    </div>
+
+    <script src="js/panier.js"></script>
+</body>
+</html>
